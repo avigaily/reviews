@@ -1,24 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route, Switch } from 'react-router-dom';
+import './styles/global.scss';
+import Nav from './cmps/Nav';
+import ReviewList from './pages/ReviewList';
+import ReviewDetails from './pages/ReviewDetails';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="app flex column">
+      <header>
+        <h1>אסטרטגיה</h1>
       </header>
+      <Nav />
+      <main className="grid-container">
+        <Switch>
+          <Route path="/:id" component={ReviewDetails} />
+          <Route path="/" component={ReviewList} exact />
+        </Switch>
+      </main>
     </div>
   );
 }

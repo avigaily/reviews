@@ -1,0 +1,35 @@
+nav {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    margin: 0;
+    z-index: 10;
+    height: 60px;
+    ul {
+        height: 100%;
+        a {
+            @include for-mobile-layout {
+                width: auto;
+            }
+            width: 100px;
+            padding: 0 10px;
+            height: 100%;
+            margin: 0 2px;
+            color: black;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            &.active {
+                box-shadow: inset 0px -6px 0px -1px rgba(187, 171, 200, 1);
+            }
+            @include for-narrow-layout {
+                &:hover:not(.active) {
+                    text-decoration: underline;
+                    text-decoration-color: $clr1;
+                }
+            }
+        }
+    }
+}

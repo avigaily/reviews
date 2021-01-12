@@ -1,0 +1,25 @@
+@mixin for-mobile-layout {
+    @media (max-width: $mobile-breakpoint + 40) {
+        @content;
+    }
+}
+
+@mixin for-narrow-layout {
+    @media (min-width: $mobile-breakpoint+40 ) {
+        @content;
+    }
+}
+
+@mixin for-normal-layout {
+    @media (min-width: $narrow-breakpoint ) {
+        @content;
+    }
+}
+
+@mixin hover-supported {
+    @media not all and (pointer: coarse) {
+        &:hover {
+            @content;
+        }
+    }
+}

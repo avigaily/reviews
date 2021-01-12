@@ -1,0 +1,128 @@
+.review-details {
+    width: 100%;
+    .back {
+        display: inline-block;
+        border-radius: 25px;
+        color: black;
+        text-decoration: underline;
+        padding: 10px;
+        &:hover {
+            background-color: $clr1;
+        }
+    }
+    .review-card {
+        margin-top: 15px;
+        .content {
+            border-radius: 4px;
+        }
+    }
+}
+
+.review-preview {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    &:hover {
+        box-shadow: 0px 0px 10px 1px rgba(148, 148, 148, 0.7);
+    }
+}
+
+.review-card {
+    color: black;
+    border-radius: 10px;
+    font-size: 1.6em;
+    .index {
+        padding: 16px;
+        background-color: $clr4;
+        font-family: OpenSans-Bold;
+        color: white;
+        border-radius: 0 10px 10px 0;
+        border: 2px solid $clr4;
+    }
+    .content {
+        flex-grow: 1;
+        border-radius: 10px 0 0 10px;
+        border: 2px solid $clr4;
+        padding: 16px;
+        position: relative;
+    }
+    @include for-mobile-layout {
+        flex-direction: column;
+        .index {
+            border-radius: 10px 10px 0 0;
+        }
+        .content {
+            border-radius: 0 0 10px 10px;
+        }
+    }
+    .menu {
+        &:hover {
+            background-color: rgb(219, 240, 219);
+            border-radius: 25px;
+        }
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        img {
+            width: 20px;
+        }
+    }
+    .tool-bar {
+        top: 25px;
+        left: 12px;
+        position: absolute;
+        min-width: 100px;
+        border: none;
+        background-color: white;
+        border-radius: 4px;
+        box-shadow: 0px 0px 10px 1px rgba(148, 148, 148, 0.7);
+        z-index: 1;
+        button {
+            font-size: 0.8em;
+            line-height: 2em;
+            margin: 5px 0;
+            &:hover {
+                background-color: rgba(148, 148, 148, 0.7);
+            }
+        }
+    }
+    .long-text {
+        margin-bottom: 16px;
+    }
+    textarea {
+        width: 100%;
+        margin: 0;
+        max-width: 680px;
+        font-family: inherit;
+        font-size: inherit;
+        border: 2px solid gray;
+        border-radius: 4px;
+        cursor: text;
+        caret-color: $clr4;
+        resize: none;
+    }
+    .data {
+        font-size: 0.5em;
+    }
+    .btns {
+        justify-content: flex-end;
+    }
+    .cancel {
+        margin: 0 10px;
+    }
+    .btns > .pill-btn {
+        background-color: $clr4;
+        color: white;
+        font-size: 0.7em;
+        height: 1.4em;
+        min-width: 90px;
+        transition: all 0.4s, border 1ms;
+        &:hover,
+        :active {
+            color: $clr4;
+            background-color: white;
+            border: 2px solid $clr4;
+        }
+    }
+}

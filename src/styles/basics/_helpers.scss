@@ -1,0 +1,28 @@
+.flex {
+    display: flex;
+    &.column {
+        flex-direction: column;
+    }
+    &.justify-center {
+        justify-content: center;
+    }
+    &.align-center {
+        align-items: center;
+    }
+    &.space-between{
+        justify-content: space-between;
+    }
+    &.space-around{
+        justify-content: space-around;
+    }
+    &.space-evenly{
+        justify-content: space-evenly;
+    }
+}
+
+.pill-btn{
+    border-radius: 25px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
